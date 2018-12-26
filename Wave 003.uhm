@@ -1,0 +1,10 @@
+// by Denis Druzhinin
+
+NumFrames = 1
+Seed = 45928188809
+Wave "lowpass(1-2*rand, 0.061, 0.275)"
+Seed = 88251119081
+Wave "lowpass(1-2*rand, 0.144, 0.089) * 0.071" blend=add
+Seed = 55830098900
+Wave "lowpass(1-2*rand, 0.738, 0.215) * 0.026" blend=add
+Normalize metric=peak

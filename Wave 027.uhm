@@ -1,0 +1,14 @@
+// by Denis Druzhinin
+
+NumFrames = 1
+Envelope L0=0.301 T1=0.444 L1=0.139 T2=0.417 L2=0.041 T3=0.031 L3=0.053 T4=0.026 L4=0.128 T5=0.082 L5=0.339 
+Seed = 70664891930
+Wave "lowpass(1-2*rand, 0.142*env(phase)^2.439, 0.07)"
+Envelope L0=0.091 T1=0.21 L1=0.418 T2=0.123 L2=0.255 T3=0.334 L3=0.078 T4=0.201 L4=0.069 T5=0.132 L5=0.09 
+Seed = 98709545679
+Wave "bandpass(1-2*rand, 0.177*env(phase)^1.244, 0.605) * 0.255*env(phase)^1.244" blend=add
+Envelope L0=0.229 T1=0.207 L1=0.234 T2=0.207 L2=0.063 T3=0.298 L3=0.112 T4=0.144 L4=0.03 T5=0.144 L5=0.332 
+Seed = 22645873862
+Wave "bandpass(1-2*rand, 0.478*env(phase)^1.086, 0.86) * 0.028*env(phase)^1.086" blend=add
+Spectrum lowest=0 highest=0 "0"
+Normalize metric=peak
